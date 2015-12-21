@@ -1,0 +1,10 @@
+<component name="ArtifactManager">
+  <artifact type="jar" build-on-make="true" name="Tracers:jar">
+    <output-path>$USER_HOME$/Desktop/Server/plugins</output-path>
+    <root id="archive" name="pBeam.jar">
+      <element id="module-output" name="pBeam" />
+      <element id="file-copy" path="$PROJECT_DIR$/src/plugin.yml" />
+      <element id="file-copy" path="$PROJECT_DIR$/src/config.yml" />
+    </root>
+  </artifact>
+</component>

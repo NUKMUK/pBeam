@@ -1,0 +1,7 @@
+cloud: true
+fireworks_spark: true
+small: true
+distance: 32
+particles: 5
+smallparticles: 1
+delay: 1
