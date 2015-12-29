@@ -8,18 +8,15 @@ import org.bukkit.entity.Player;
 import org.bukkit.event.Listener;
 import org.bukkit.plugin.java.JavaPlugin;
 
-/**
- * Created by rasmu on 13.11.2015.
- */
-public class pBeam extends JavaPlugin implements Listener {
+public class pBeams extends JavaPlugin implements Listener {
 
-    public void startBeam() {
+    private void startBeam() {
         Bukkit.getScheduler().scheduleSyncRepeatingTask(this, new Runnable() {
             @Override
             public void run() {
                 for (Player p : Bukkit.getOnlinePlayers()) {
                     for (Player pl : Bukkit.getOnlinePlayers()) {
-                        if (p.isDead() == false && pl.isDead() == false) {
+                        if (!p.isDead() && !pl.isDead()) {
                             if (p.getLocation().distance(pl.getLocation()) >= getConfig().getInt("distance")) {
 
                                 if (getConfig().getBoolean("cloud")) {
@@ -69,7 +66,7 @@ public class pBeam extends JavaPlugin implements Listener {
             public void run() {
                 for (Player p : Bukkit.getOnlinePlayers()) {
                     for (Player pl : Bukkit.getOnlinePlayers()) {
-                        if (p.isDead() == false && pl.isDead() == false) {
+                        if (!p.isDead() && !pl.isDead()) {
                             if (p.getLocation().distance(pl.getLocation()) >= getConfig().getInt("distance")) {
 
                                 if (getConfig().getBoolean("small")) {
